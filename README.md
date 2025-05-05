@@ -51,7 +51,7 @@ A real-time collaborative pixel canvas, where users can place a pixel every seco
 1. Clone the repository:
 ```bash
 git clone https://github.com/mosvlad/pixel_battle
-cd pixel-battle
+cd pixel_battle
 ```
 
 2. Create and activate a virtual environment:
