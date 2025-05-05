@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Battle</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <meta name="description" content="Place pixels on a shared canvas - one pixel every second!">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Pixel Battle</h1>
+            <div class="connection-status" id="connectionStatus">
+                <span class="status-indicator"></span>
+                <span class="status-text">Connecting...</span>
+            </div>
+        </header>
+
+        <main>
+            <div class="canvas-container">
+                <div class="canvas-controls">
+                    <button id="zoomIn" title="Zoom In">+</button>
+                    <button id="zoomOut" title="Zoom Out">-</button>
+                    <button id="resetView" title="Reset View">Reset</button>
+                </div>
+                <canvas id="pixelCanvas"></canvas>
+                <div id="coordinates">X: 0, Y: 0</div>
+                <div id="cooldown" class="hidden">Wait <span id="cooldownTime">1.0</span>s</div>
+            </div>
+
+            <div class="sidebar">
+                <div class="color-picker">
+                    <h2>Select Color</h2>
+                    <div class="colors-grid" id="colorsGrid"></div>
+                    <div class="custom-color">
+                        <label for="colorInput">Custom:</label>
+                        <input type="color" id="colorInput" value="#000000">
+                    </div>
+                </div>
+
+                <div class="instructions">
+                    <h2>How to Play</h2>
+                    <ul>
+                        <li>Select a color from the palette</li>
+                        <li>Click on the canvas to place a pixel</li>
+                        <li>Wait 1 second between placements</li>
+                        <li>Collaborate with others to create art!</li>
+                    </ul>
+                </div>
+
+                <div class="stats">
+                    <h2>Stats</h2>
+                    <p>Online users: <span id="onlineUsers">-</span></p>
+                    <p>Pixels placed: <span id="pixelsPlaced">0</span></p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Pixel Battle &copy; 2025 - Place a pixel every second!</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/static/js/canvas.js"></script>
+    <script src="/static/js/websocket.js"></script>
+    <script src="/static/js/ui.js"></script>
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
