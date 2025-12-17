@@ -313,8 +313,8 @@ class PixelCanvas {
                 // Vertical lines
                 for (let x = startX; x <= endX; x++) {
                     const pixelX = this.panX + x * scaledPixelSize;
-                    this.gridCtx.moveTo(pixelX, this.panX + startY * scaledPixelSize);
-                    this.gridCtx.lineTo(pixelX, this.panX + endY * scaledPixelSize);
+                    this.gridCtx.moveTo(pixelX, this.panY + startY * scaledPixelSize);
+                    this.gridCtx.lineTo(pixelX, this.panY + endY * scaledPixelSize);
                 }
 
                 // Horizontal lines
